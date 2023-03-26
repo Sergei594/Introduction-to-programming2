@@ -14,7 +14,7 @@ void FillArray(int[] arr)
     Random rnd = new Random();
     for (int i = 0; i < arr.Length; i++)
     {
-        arr[i] = rnd.Next(100, 150);
+        arr[i] = rnd.Next(1, 10);
 
     }
 }
@@ -36,7 +36,9 @@ int SumElement(int[] arr)
     while (i < arr.Length)
     {
         sum = sum + arr[i];
-        i = i + 2;
+        if (i % 2 == 0)
+        i = i + 1;
+        else i = (i + 2);
 
     }
     return sum;
